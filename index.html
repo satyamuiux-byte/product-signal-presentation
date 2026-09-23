@@ -319,21 +319,21 @@
         }
     </style>
 </head>
-<body class="h-screen w-screen flex flex-col justify-between relative bg-paper-100 dark:bg-[#141211] text-charcoal-900 dark:text-[#f4efe6] antialiased selection:bg-terracotta-500 selection:text-white font-sans overflow-hidden transition-colors duration-300">
+<body class="min-h-screen md:h-screen w-screen flex flex-col justify-between relative bg-paper-100 dark:bg-[#141211] text-charcoal-900 dark:text-[#f4efe6] antialiased selection:bg-terracotta-500 selection:text-white font-sans overflow-x-hidden md:overflow-hidden transition-colors duration-300">
 
     <!-- Header (Fixed 4rem / h-16) -->
-    <header class="h-16 px-6 md:px-10 flex items-center justify-between z-30 border-b border-paper-200 dark:border-[#2a2624] bg-paper-100/90 dark:bg-[#181615]/92 backdrop-blur-md shrink-0">
-        <div class="flex items-center gap-3">
+    <header class="h-16 px-4 md:px-10 flex items-center justify-between z-30 border-b border-paper-200 dark:border-[#2a2624] bg-paper-100/90 dark:bg-[#181615]/92 backdrop-blur-md shrink-0">
+        <div class="flex items-center gap-2.5 sm:gap-3">
             <div class="w-8 h-8 rounded-lg bg-terracotta-600 flex items-center justify-center text-xs font-bold text-white shadow-sm font-sans tracking-tight">
                 PS
             </div>
             <div class="flex items-center gap-2">
-                <span class="font-bold text-base text-charcoal-900 dark:text-paper-100 font-serif">Product Signal</span>
+                <span class="font-bold text-sm sm:text-base text-charcoal-900 dark:text-paper-100 font-serif">Product Signal</span>
                 <span class="text-xs text-charcoal-700 dark:text-paper-300 hidden sm:inline-block font-sans">/ AI UX Case Study</span>
             </div>
         </div>
 
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 sm:gap-3">
             <a href="https://product-signal-lake.vercel.app" target="_blank" class="hidden md:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 transition-all">
                 <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span> Live App
             </a>
@@ -343,10 +343,10 @@
             </a>
 
             <!-- Theme Toggle Button (Light/Dark Mode Toggle) -->
-            <button id="themeToggleBtn" onclick="toggleTheme()" class="px-3.5 py-1.5 rounded-full bg-paper-200 dark:bg-[#282422] text-charcoal-900 dark:text-paper-100 border border-paper-300 dark:border-[#383330] hover:bg-paper-300 dark:hover:bg-[#342f2c] transition-all flex items-center gap-1.5 text-xs font-semibold" title="Toggle Light / Dark Mode (Key: D)">
+            <button id="themeToggleBtn" onclick="toggleTheme()" class="px-3 py-1.5 rounded-full bg-paper-200 dark:bg-[#282422] text-charcoal-900 dark:text-paper-100 border border-paper-300 dark:border-[#383330] hover:bg-paper-300 dark:hover:bg-[#342f2c] transition-all flex items-center gap-1.5 text-xs font-semibold" title="Toggle Light / Dark Mode (Key: D)">
                 <svg id="themeSunIcon" class="w-3.5 h-3.5 text-amber-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 <svg id="themeMoonIcon" class="w-3.5 h-3.5 text-charcoal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                <span id="themeToggleLabel">Dark Mode</span>
+                <span id="themeToggleLabel" class="hidden sm:inline">Dark Mode</span>
             </button>
 
             <!-- Shortcuts Help Trigger -->
@@ -360,8 +360,8 @@
         </div>
     </header>
 
-    <!-- Main Presentation Area (Calculated viewport height to avoid scrolling) -->
-    <main class="h-[calc(100vh-8rem)] w-full relative flex items-center justify-center p-4 md:p-8 overflow-hidden shrink-0">
+    <!-- Main Presentation Area (Calculated viewport height to avoid scrolling on desktop, scrollable on mobile) -->
+    <main class="min-h-[calc(100vh-8rem)] md:h-[calc(100vh-8rem)] w-full relative flex items-center justify-center p-4 sm:p-6 md:p-8 overflow-y-auto md:overflow-hidden shrink-0 my-auto">
 
         <!-- SLIDE 1: Title & Overview -->
         <div class="slide-container active flex-col items-center justify-center text-center max-w-4xl mx-auto w-full">
@@ -1184,6 +1184,37 @@
                 goToSlide(totalSlides - 1);
             }
         });
+
+        // Touch Swipe Navigation for Mobile & Tablet Touchscreens
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+            
+            // Check horizontal swipe threshold (50px) and ensure horizontal intent
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                if (diffX < 0) {
+                    nextSlide(); // Swipe Left -> Next Slide
+                } else {
+                    prevSlide(); // Swipe Right -> Prev Slide
+                }
+            }
+        }
 
         // Initialize
         initTheme();
