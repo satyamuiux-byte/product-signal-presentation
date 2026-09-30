@@ -56,10 +56,6 @@
             -webkit-font-smoothing: antialiased;
             letter-spacing: normal !important;
             background-color: #f7f4ee; /* Claude Warm Paper Canvas */
-            background-image: 
-                radial-gradient(circle at 12% 18%, rgba(217, 109, 83, 0.07), transparent 40%),
-                radial-gradient(circle at 88% 82%, rgba(227, 218, 208, 0.45), transparent 45%);
-            background-attachment: fixed;
             color: #1c1a19; /* Rich Dark Charcoal */
         }
 
@@ -102,9 +98,6 @@
         /* Dark Mode Styling (Default Primary is Light Mode) */
         .dark body, body.dark, html.dark body {
             background-color: #141211 !important;
-            background-image: 
-                radial-gradient(circle at 12% 18%, rgba(217, 109, 83, 0.12), transparent 40%),
-                radial-gradient(circle at 88% 82%, rgba(52, 168, 83, 0.08), transparent 45%) !important;
             color: #f4efe6 !important;
         }
 
@@ -128,20 +121,16 @@
             color: #f4efe6 !important;
         }
 
-        /* Modern Glassmorphism Cards in Dark Mode */
         .dark .minimal-card {
-            background-color: rgba(30, 27, 26, 0.7) !important;
-            backdrop-filter: blur(16px) !important;
-            -webkit-backdrop-filter: blur(16px) !important;
-            border-color: rgba(255, 255, 255, 0.1) !important;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.12) !important;
+            background-color: #1e1b1a !important;
+            border-color: #332f2c !important;
             color: #f4efe6 !important;
         }
 
         .dark .minimal-card-hover:hover {
-            background-color: rgba(38, 34, 32, 0.85) !important;
+            background-color: #262220 !important;
             border-color: #d96d53 !important;
-            box-shadow: 0 16px 32px -5px rgba(217, 109, 83, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.18) !important;
+            box-shadow: 0 14px 28px -5px rgba(217, 109, 83, 0.25) !important;
         }
 
         .dark .browser-mockup {
@@ -149,37 +138,33 @@
         }
 
         .dark header, .dark footer {
-            background-color: rgba(20, 18, 17, 0.82) !important;
-            backdrop-filter: blur(20px) !important;
-            -webkit-backdrop-filter: blur(20px) !important;
-            border-color: rgba(255, 255, 255, 0.08) !important;
+            background-color: rgba(24, 22, 21, 0.95) !important;
+            border-color: #2a2624 !important;
         }
 
         /* Inner rectangular rows inside cards */
         .dark .bg-paper-100 {
-            background-color: rgba(38, 34, 32, 0.65) !important;
-            border-color: rgba(255, 255, 255, 0.08) !important;
+            background-color: #262220 !important;
+            border-color: #383330 !important;
             color: #f4efe6 !important;
         }
 
         .dark .bg-paper-200 {
-            background-color: rgba(45, 41, 39, 0.7) !important;
-            border-color: rgba(255, 255, 255, 0.08) !important;
+            background-color: #2d2927 !important;
+            border-color: #403b38 !important;
             color: #f4efe6 !important;
         }
 
         .dark .bg-paper-50 {
-            background-color: rgba(30, 27, 26, 0.75) !important;
-            border-color: rgba(255, 255, 255, 0.1) !important;
+            background-color: #1e1b1a !important;
+            border-color: #332f2c !important;
             color: #f4efe6 !important;
         }
 
-        /* Callout Quotes & Highlight Boxes with Frosted Glass */
+        /* Callout Quotes & Highlight Boxes */
         .dark .bg-rose-50, .dark .bg-rose-50\/70 {
-            background-color: rgba(70, 20, 30, 0.55) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
-            border-color: rgba(225, 90, 110, 0.45) !important;
+            background-color: rgba(70, 20, 30, 0.65) !important;
+            border-color: rgba(225, 90, 110, 0.5) !important;
             color: #fecdd3 !important;
         }
         .dark .bg-rose-50 p, .dark .bg-rose-50\/70 p {
@@ -187,10 +172,8 @@
         }
 
         .dark .bg-terracotta-50 {
-            background-color: rgba(70, 35, 25, 0.55) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
-            border-color: rgba(217, 109, 83, 0.45) !important;
+            background-color: rgba(70, 35, 25, 0.65) !important;
+            border-color: rgba(217, 109, 83, 0.5) !important;
             color: #f9eae5 !important;
         }
         .dark .bg-terracotta-50 p {
@@ -198,10 +181,8 @@
         }
 
         .dark .bg-emerald-50 {
-            background-color: rgba(20, 50, 35, 0.55) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
-            border-color: rgba(52, 168, 83, 0.45) !important;
+            background-color: rgba(20, 50, 35, 0.65) !important;
+            border-color: rgba(52, 168, 83, 0.5) !important;
             color: #d1fae5 !important;
         }
         .dark .bg-emerald-50 p {
@@ -209,10 +190,8 @@
         }
 
         .dark .bg-purple-50 {
-            background-color: rgba(50, 30, 70, 0.55) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
-            border-color: rgba(168, 85, 247, 0.45) !important;
+            background-color: rgba(50, 30, 70, 0.65) !important;
+            border-color: rgba(168, 85, 247, 0.5) !important;
             color: #f3e8ff !important;
         }
         .dark .bg-purple-50 p {
@@ -251,8 +230,8 @@
         }
 
         .dark kbd {
-            background-color: rgba(44, 40, 38, 0.8) !important;
-            border-color: rgba(255, 255, 255, 0.1) !important;
+            background-color: #2c2826 !important;
+            border-color: #403b38 !important;
             color: #f4efe6 !important;
         }
 
@@ -309,25 +288,23 @@
             }
         }
 
-        /* Modern Glassmorphism Minimal Card Styling (Light Mode) */
+        /* Claude Retro Warm Paper Minimal Card Styling */
         .minimal-card {
-            background: rgba(255, 255, 255, 0.78);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(229, 222, 210, 0.85);
-            box-shadow: 0 8px 30px 0 rgba(60, 50, 40, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            background: #ffffff;
+            border: 1px solid #e5ded2;
+            box-shadow: 0 4px 16px -4px rgba(60, 50, 40, 0.04);
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .minimal-card-hover:hover {
-            background: rgba(255, 255, 255, 0.92);
-            border-color: rgba(217, 109, 83, 0.5);
+            background: #ffffff;
+            border-color: #d96d53;
             transform: translateY(-2px);
-            box-shadow: 0 16px 32px -4px rgba(217, 109, 83, 0.18), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+            box-shadow: 0 14px 28px -5px rgba(217, 109, 83, 0.15);
         }
 
         .browser-mockup {
-            box-shadow: 0 16px 36px -10px rgba(43, 39, 37, 0.12), 0 0 0 1px rgba(227, 218, 208, 0.9);
+            box-shadow: 0 16px 36px -10px rgba(43, 39, 37, 0.12), 0 0 0 1px #e3dad0;
         }
 
         ::-webkit-scrollbar {
@@ -564,11 +541,128 @@
             </div>
         </div>
 
-        <!-- SLIDE 4: 3. The Solution & Core Workflow -->
+        <!-- SLIDE 4: Market Landscape & Competitive Positioning -->
+        <div class="slide-container flex-col justify-center max-w-6xl mx-auto w-full">
+            <div class="animate-item-1 text-terracotta-600 text-xs font-bold uppercase uppercase-tag mb-2 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    <span>3. Market Landscape & Positioning</span>
+                </div>
+                <span class="text-[11px] text-terracotta-700 dark:text-terracotta-300 bg-terracotta-50 dark:bg-terracotta-950/50 px-3 py-0.5 rounded-full border border-terracotta-100 dark:border-terracotta-800/60 font-semibold hidden sm:inline-block">Competitive Synthesis</span>
+            </div>
+            
+            <h2 class="animate-item-1 text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal-900 mb-4 font-serif">
+                Why Existing Workflows Fail Product Managers
+            </h2>
+
+            <!-- Matrix Container -->
+            <div class="animate-item-2 space-y-3 w-full">
+                <!-- Header Labels (Desktop) -->
+                <div class="hidden lg:grid lg:grid-cols-12 gap-3 px-4 py-2 bg-paper-200/60 dark:bg-[#1a1716] rounded-xl text-[11px] font-bold uppercase uppercase-tag text-charcoal-700 dark:text-paper-300">
+                    <div class="lg:col-span-2">Platform / Stack</div>
+                    <div class="lg:col-span-2 text-emerald-800 dark:text-emerald-400">What They Do Well</div>
+                    <div class="lg:col-span-3 text-rose-700 dark:text-rose-400">Where Workflow Breaks</div>
+                    <div class="lg:col-span-2">Research Question</div>
+                    <div class="lg:col-span-3 text-terracotta-600 dark:text-terracotta-400">🌟 Product Signal Advantage</div>
+                </div>
+
+                <!-- Competitor 1: Productboard -->
+                <div class="minimal-card p-4 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-3.5 items-center">
+                    <div class="lg:col-span-2 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-blue-500 shrink-0"></span>
+                            <h3 class="text-sm font-bold text-charcoal-900 dark:text-paper-100 font-serif">Productboard</h3>
+                        </div>
+                        <p class="text-xs text-charcoal-900 dark:text-paper-200 font-semibold tracking-tight">productboard.com</p>
+                    </div>
+
+                    <div class="lg:col-span-2 p-3 rounded-xl bg-paper-100 dark:bg-[#24201e] border border-paper-200 dark:border-[#332f2c]">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-emerald-800 dark:text-emerald-300 block mb-1">Scale Execution</span>
+                        <p class="text-xs text-charcoal-800 dark:text-paper-200 leading-snug">Connects delivery frameworks seamlessly across enterprise teams.</p>
+                    </div>
+
+                    <div class="lg:col-span-3 p-3 rounded-xl bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-rose-700 dark:text-rose-300 block mb-1">Over-Automation Gap</span>
+                        <p class="text-xs text-rose-900 dark:text-rose-200 leading-snug">AI drafts full specs in a black box, losing touch with raw user context.</p>
+                    </div>
+
+                    <div class="lg:col-span-2 p-3 rounded-xl bg-paper-50 dark:bg-[#1a1716] border border-paper-200 dark:border-[#2e2a28]">
+                        <p class="text-[11px] italic text-charcoal-700 dark:text-paper-300 leading-snug">"Have you used AI to summarize feedback? What made you distrust output?"</p>
+                    </div>
+
+                    <div class="lg:col-span-3 p-3.5 rounded-xl bg-terracotta-50 dark:bg-terracotta-950/40 border border-terracotta-200 dark:border-terracotta-800/60">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-terracotta-700 dark:text-terracotta-300 block mb-1">🌟 AI Analyzes, PM Decides</span>
+                        <p class="text-xs font-medium text-charcoal-900 dark:text-paper-100 leading-snug">Surfaces semantic patterns, but never drafts black-box strategy for the human.</p>
+                    </div>
+                </div>
+
+                <!-- Competitor 2: Canny -->
+                <div class="minimal-card p-4 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-3.5 items-center">
+                    <div class="lg:col-span-2 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-purple-500 shrink-0"></span>
+                            <h3 class="text-sm font-bold text-charcoal-900 dark:text-paper-100 font-serif">Canny</h3>
+                        </div>
+                        <p class="text-xs text-charcoal-900 dark:text-paper-200 font-semibold tracking-tight">canny.io</p>
+                    </div>
+
+                    <div class="lg:col-span-2 p-3 rounded-xl bg-paper-100 dark:bg-[#24201e] border border-paper-200 dark:border-[#332f2c]">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-emerald-800 dark:text-emerald-300 block mb-1">Feedback Loops</span>
+                        <p class="text-xs text-charcoal-800 dark:text-paper-200 leading-snug">Keeps users engaged by auto-publishing public feature changelogs.</p>
+                    </div>
+
+                    <div class="lg:col-span-3 p-3 rounded-xl bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-rose-700 dark:text-rose-300 block mb-1">Popularity Contests</span>
+                        <p class="text-xs text-rose-900 dark:text-rose-200 leading-snug">Public upvotes cause feature bloat driven by a loud minority instead of strategy.</p>
+                    </div>
+
+                    <div class="lg:col-span-2 p-3 rounded-xl bg-paper-50 dark:bg-[#1a1716] border border-paper-200 dark:border-[#2e2a28]">
+                        <p class="text-[11px] italic text-charcoal-700 dark:text-paper-300 leading-snug">"How do you determine if feedback is meaningful or just loud?"</p>
+                    </div>
+
+                    <div class="lg:col-span-3 p-3.5 rounded-xl bg-terracotta-50 dark:bg-terracotta-950/40 border border-terracotta-200 dark:border-terracotta-800/60">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-terracotta-700 dark:text-terracotta-300 block mb-1">🌟 Problem-First Backlog</span>
+                        <p class="text-xs font-medium text-charcoal-900 dark:text-paper-100 leading-snug">Operates internally, shifting narrative to underlying user problems.</p>
+                    </div>
+                </div>
+
+                <!-- Competitor 3: The Manual Stack -->
+                <div class="minimal-card p-4 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-3.5 items-center">
+                    <div class="lg:col-span-2 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
+                            <h3 class="text-sm font-bold text-charcoal-900 dark:text-paper-100 font-serif">Manual Stack</h3>
+                        </div>
+                        <p class="text-xs text-charcoal-900 dark:text-paper-200 font-semibold tracking-tight">Sheets + ChatGPT</p>
+                    </div>
+
+                    <div class="lg:col-span-2 p-3 rounded-xl bg-paper-100 dark:bg-[#24201e] border border-paper-200 dark:border-[#332f2c]">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-emerald-800 dark:text-emerald-300 block mb-1">Zero Setup Cost</span>
+                        <p class="text-xs text-charcoal-800 dark:text-paper-200 leading-snug">Highly accessible, free, and requires no API configurations.</p>
+                    </div>
+
+                    <div class="lg:col-span-3 p-3 rounded-xl bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-rose-700 dark:text-rose-300 block mb-1">The Trust Gap</span>
+                        <p class="text-xs text-rose-900 dark:text-rose-200 leading-snug">Standard LLMs cause arithmetic errors and unverified text summaries.</p>
+                    </div>
+
+                    <div class="lg:col-span-2 p-3 rounded-xl bg-paper-50 dark:bg-[#1a1716] border border-paper-200 dark:border-[#2e2a28]">
+                        <p class="text-[11px] italic text-charcoal-700 dark:text-paper-300 leading-snug">"How do you verify an AI summary matches actual customer quotes?"</p>
+                    </div>
+
+                    <div class="lg:col-span-3 p-3.5 rounded-xl bg-terracotta-50 dark:bg-terracotta-950/40 border border-terracotta-200 dark:border-terracotta-800/60">
+                        <span class="text-[10px] font-bold uppercase uppercase-tag text-terracotta-700 dark:text-terracotta-300 block mb-1">🌟 Hybrid AI + Code Engine</span>
+                        <p class="text-xs font-medium text-charcoal-900 dark:text-paper-100 leading-snug">Calculates exact mention counts with 100% quote traceability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: 4. The Solution & Core Workflow -->
         <div class="slide-container flex-col justify-center max-w-5xl mx-auto w-full">
             <div class="animate-item-1 text-terracotta-600 text-xs font-bold uppercase uppercase-tag mb-2 flex items-center gap-2">
                 <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                <span>3. The Solution & Core Workflow</span>
+                <span>4. The Solution & Core Workflow</span>
             </div>
             <h2 class="animate-item-1 text-3xl sm:text-4xl font-bold text-charcoal-900 mb-6 font-serif">
                 From Messy Feedback to a Clearer Understanding
@@ -979,7 +1073,7 @@
         <div class="flex items-center justify-between mb-8 max-w-6xl mx-auto w-full">
             <div class="flex items-center gap-3">
                 <h3 class="text-2xl font-bold text-white font-serif">Slide Navigator</h3>
-                <span class="text-xs text-paper-200 bg-white/10 px-3 py-0.5 rounded-full">11 Slides</span>
+                <span class="text-xs text-paper-200 bg-white/10 px-3 py-0.5 rounded-full">12 Slides</span>
             </div>
             <button onclick="toggleOverviewDrawer()" class="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -1042,14 +1136,15 @@
             "AI UX Case Study Intro",
             "1. The Problem",
             "2. The Objective",
-            "3. Solution & Workflow",
-            "4. Main Value Screen",
-            "5. UX Decision — Cards",
-            "6. AI UX Accuracy Approach",
-            "7. Testing & Validation Plan",
-            "8. What I Learned",
-            "9. My Role & UX Scope",
-            "10. Final Takeaway & Contact"
+            "3. Market Landscape & Positioning",
+            "4. Solution & Workflow",
+            "5. Main Value Screen",
+            "6. UX Decision — Cards",
+            "7. AI UX Accuracy Approach",
+            "8. Testing & Validation Plan",
+            "9. What I Learned",
+            "10. My Role & UX Scope",
+            "11. Final Takeaway & Contact"
         ];
 
         function updateDeck() {
